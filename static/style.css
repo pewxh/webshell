@@ -1,0 +1,95 @@
+@import url('https://use.typekit.net/xwj1gua.css');
+* {
+  box-sizing: border-box;
+  font-family: muli, sans-serif;
+}
+
+body {
+  background: url('./bg.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.glass {
+  background: rgba(0, 255, 221, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+}
+#label {
+  /* font-family: source-code-pro, monospace; */
+  /* font-family: muli, sans-serif; */
+  font-size: 9em;
+  position: relative;
+  color: #252839;
+  -webkit-text-stroke: 0.3vw #383d52;
+}
+#label::before {
+  content: attr(data-text);
+  border-right: 1px solid #01fe87;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  -webkit-text-stroke: 0vw #383d52;
+  color: #01fe87;
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 90vw;
+}
+
+input {
+  width: 60vw;
+  height: 5vh;
+}
+
+.btn {
+  background-color: #34db7a;
+  color: black;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 1.3em;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.output {
+  font-size: xx-large;
+  color: white;
+}
